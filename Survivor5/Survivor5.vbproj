@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9FB5ED5-A2E7-4DC6-AD69-58C7B24743FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Survivor5.My.MyApplication</StartupObject>
+    <RootNamespace>Survivor5</RootNamespace>
+    <AssemblyName>Survivor5</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Survivor5.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Survivor5.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bullet.vb" />
+    <Compile Include="Currency.vb" />
+    <Compile Include="Drop.vb" />
+    <Compile Include="Enemy.vb" />
+    <Compile Include="Explosion.vb" />
+    <Compile Include="Fly.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.vb">
+      <DependentUpon>Game.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOver.Designer.vb">
+      <DependentUpon>GameOver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GameOver.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indicator.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Painter.vb" />
+    <Compile Include="Player.vb" />
+    <Compile Include="PowerUps.vb" />
+    <Compile Include="Shop.Designer.vb">
+      <DependentUpon>Shop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stage.vb" />
+    <Compile Include="Victory.Designer.vb">
+      <DependentUpon>Victory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Victory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop.resx">
+      <DependentUpon>Shop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Victory.resx">
+      <DependentUpon>Victory.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Angel_126x144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Component_WingShip_Mutant_150x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Component_WingShip_Spike_150x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flame_37x56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gemRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purpleNebula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potion4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple_Nebula_08-512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CGB02-purple_M_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walk_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple_Nebula_06-512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Galactis_Mutant_153x188.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bug_Infected_80x80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple_Nebula_02-512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Angel_B_Crystal_126x144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoreDefender_NightMare_H_Judgement_209x182.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mutant_SpaceMorphWasp_Mother_B_281x299.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue_Nebula_01-512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue_Nebula_04-512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green_Nebula_07-512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UFO_Cortex_69x69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plasma_Circle_80x80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scorpion_Evo_112x102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0034.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0035.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0038.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0039.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0043.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0046.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue_Nebula_06-512x512.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
